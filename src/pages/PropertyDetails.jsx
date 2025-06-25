@@ -74,7 +74,7 @@ export default function PropertyDetails() {
       </h2>
       <p className="text-gray-600">{address?.city || "Unknown City"}</p>
 
-      <p className="text-blue-700 font-bold text-xl mt-2">
+      <p className="text-gray-900 font-bold text-xl mt-2">
         {price?.value ? `$${price.value.toLocaleString()}` : "Price not listed"}
       </p>
 
