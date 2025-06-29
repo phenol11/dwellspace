@@ -34,10 +34,10 @@ export default function ListingCard({ property }) {
             {property.title}
           </h3>
           <p className="text-sm text-gray-500 mb-1">{property.location}</p>
-          <p className="text-[#071538] font-bold text-lg">{property.price}</p>
+          <p className="text-[#0f172a] font-bold text-lg">{property.price}</p>
         </div>
 
-        <button className="mt-4 w-full bg-[#071538] text-white py-2 rounded hover:bg-[#0f172a]-700 transition">
+        <button className="mt-4 w-full bg-[#0f172a] hover:bg-blue-800 text-white py-2 rounded transition duration-200">
           View Details
         </button>
       </div>

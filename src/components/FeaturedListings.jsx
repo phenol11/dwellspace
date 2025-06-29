@@ -15,7 +15,7 @@ const containerVariants = {
 export default function FeaturedListings() {
   const { properties, loading } = useProperty();
 
-  const featured = properties.slice(0, 12);
+  const featured = properties.slice(0, 15);
 
   return (
     <section className="py-12 px-4 max-w-6xl mx-auto">

@@ -5,7 +5,6 @@ import { ChevronDown } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
-      {/* Background image with zoom effect */}
       <motion.div
         initial={{ scale: 1.05 }}
         animate={{ scale: 1 }}
@@ -13,7 +12,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-[url('/assets/image-one.jpg')]"
       ></motion.div>
 
-      {/* <div className="absolute inset-0 bg-black bg-opacity-60 z-0" /> */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-blue-700/40 z-0" />
 
       <motion.div
         className="z-10 text-center px-4"
@@ -21,14 +20,14 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-4xl font-bold mb-2 sm:text-5xl drop-shadow-xl">
+        <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4 drop-shadow-xl">
           Find Your Dream Home
         </h2>
-        <p className="text-lg text-gray-200 drop-shadow">
+        <p className="text-lg text-gray-200 drop-shadow mb-6">
           Browse through thousands of listings tailored to your needs.
         </p>
         <Link to="/listings">
-          <button className="mt-4 bg-[#0f172a] hover:bg-[#0f172a]-700 px-6 py-3 rounded text-white text-lg shadow-lg">
+          <button className="bg-amber-500 hover:bg-amber-600 px-6 py-3 rounded-lg text-white text-lg font-semibold shadow-lg transition duration-200">
             View Listings
           </button>
         </Link>

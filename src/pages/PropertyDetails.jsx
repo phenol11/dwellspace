@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+// ✅ Existing imports
+import { useParams, useNavigate } from "react-router-dom";
 import { useProperty } from "../context/PropertyContext";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,6 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function PropertyDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { properties, loading } = useProperty();
   const [current, setCurrent] = useState(0);
 
@@ -34,6 +36,11 @@ export default function PropertyDetails() {
 
   const nextSlide = () => {
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  // ✅ Handler for payment button click
+  const handlePayment = () => {
+    navigate("/payment");
   };
 
   return (
@@ -96,6 +103,14 @@ export default function PropertyDetails() {
           {`${address?.streetAddress || ""}, ${address?.city || ""}`}
         </p>
       </div>
+
+      {/* ✅ Make Payment Button */}
+      <button
+        onClick={handlePayment}
+        className="mt-8 bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-200"
+      >
+        Make Payment
+      </button>
     </div>
   );
 }

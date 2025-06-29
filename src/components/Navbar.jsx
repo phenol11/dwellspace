@@ -13,9 +13,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#0f172a] text-white shadow-md">
+    <nav className="bg-blue-900 text-white shadow-md">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">DwellSpace</h1>
+        {/* Logo */}
+        <Link to="/">
+          <img
+            src="/assets/Dwellspace.png"
+            alt="DwellSpace Logo"
+            className="h-12 w-auto object-contain"
+          />
+        </Link>
 
         <button
           className="sm:hidden"
@@ -25,14 +32,14 @@ export default function Navbar() {
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <div className="hidden sm:flex space-x-6">
-          <Link to="/" className="hover:text-blue-300 transition">
+        <div className="hidden sm:flex space-x-6 text-lg font-medium">
+          <Link to="/" className="hover:text-amber-400 transition">
             Home
           </Link>
-          <Link to="/listings" className="hover:text-blue-300 transition">
+          <Link to="/listings" className="hover:text-amber-400 transition">
             Listings
           </Link>
-          <Link to="/contact" className="hover:text-blue-300 transition">
+          <Link to="/contact" className="hover:text-amber-400 transition">
             Contact
           </Link>
         </div>
@@ -56,7 +63,7 @@ export default function Navbar() {
               >
                 <Link
                   to={path}
-                  className="block hover:text-gray-300 pb-1"
+                  className="block hover:text-amber-400 pb-1"
                   onClick={() => setIsOpen(false)}
                 >
                   {path === "/" ? "Home" : path.replace("/", "")}
