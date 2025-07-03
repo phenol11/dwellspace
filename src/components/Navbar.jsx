@@ -20,7 +20,7 @@ export default function Navbar() {
           <img
             src="/assets/Dwellspace.png"
             alt="DwellSpace Logo"
-            className="h-12 w-auto object-contain"
+            className="h-6 sm:h-12 w-auto"
           />
         </Link>
 
@@ -54,7 +54,7 @@ export default function Navbar() {
             exit="exit"
             variants={navVariants}
           >
-            {["/", "/listings", "/contact"].map((path, idx) => (
+            {["/", "/Listings", "/Contact"].map((path, idx) => (
               <motion.div
                 key={path}
                 initial={{ opacity: 0, y: 10 }}
