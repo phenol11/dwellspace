@@ -30,5 +30,23 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          const nameInput = document.querySelector('input[name="name"]');
+          const emailInput = document.querySelector('input[name="email"]');
+          const messageInput = document.querySelector(
+            'textarea[name="message"]'
+          );
+
+          if (nameInput && emailInput && messageInput) {
+            nameInput.value = "John Doe";
+            emailInput.value = "john@example.com";
+            messageInput.value =
+              "Hey! I’m interested in working with you. Let's talk.";
+          }
+        }, 1000); // Wait 1 second before autofill
+      });
+    </script>
   </body>
 </html>
